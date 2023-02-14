@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    background-color: black;
+    color: white;
+    width: 70%;
+    margin: auto;
+}
+
+.header-countainer {
+    background-color: black;
+}
+
+.header img {
+    width: 150px;
+}
+
+.header ul {
+    display: inline-block;
+    padding-left: 60%;
+    padding-bottom: 10px;
+}
+
+.header li {
+    display: inline-block;
+    padding-right: 12px;
+    font-size: 15px;
+    text-align: right;
+}
