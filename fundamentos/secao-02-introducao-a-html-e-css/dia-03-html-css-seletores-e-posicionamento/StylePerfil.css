@@ -1,0 +1,27 @@
+.paragrafos {
+    background-color: aqua;
+    padding-left: 30%;
+    width: 250px;
+    height: 400px;
+    overflow: auto;
+}
+
+#mountain {
+    width: 600px;
+    position: absolute;
+}
+
+#Character {
+    width: 150px;
+    position: absolute;
+    padding-left: 180px;
+    padding-top: 178px;
+}
+
+#Oculus {
+    width: 110px;
+    position: absolute;
+    padding-left: 200px;
+    padding-top: 210px;
+
+}
