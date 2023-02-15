@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -147,6 +147,7 @@
 }
 
 .footer h2 {
+    font-size: 30px;
     padding-top: 31px;
 }
 
@@ -170,6 +171,10 @@
 .div-style h3 {
     
     padding: 20px;
+}
+
+.div-style h4 {
+    font-size: 22px;
 }
 
 
