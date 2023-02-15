@@ -9,6 +9,7 @@
     color: white;
     width: 65%;
     margin: auto;
+    height: 70px;
 }
 
 .header-countainer {
@@ -17,13 +18,21 @@
 
 .header img {
     width: 150px;
+    vertical-align: middle;
+    padding: 10px 0;
 }
 
 .header ul {
     display: inline-block;
     padding-left: 60%;
     padding-bottom: 10px;
-    ;
+    
+}
+
+.header li:hover {
+    color: green;
+    cursor: pointer;
+
 }
 
 .header li {
@@ -67,8 +76,19 @@
     padding: 10px 10px;
     border-radius: 100px;
     text-align: center;
-    border: 2px solid black
+    border: 2px solid black;
+    opacity: 0.9;
+    
 } 
+.comece-agora:hover {
+    border: 3px solid black;
+    opacity: 1;
+    font-size: 18px;
+    cursor: pointer;
+    
+
+
+}
 
 .ver-planos {
 
@@ -78,6 +98,13 @@
     border-radius: 100px;
     text-align: center;
     
+    
+}
+
+.ver-planos:hover {
+    border: 3px solid white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 
