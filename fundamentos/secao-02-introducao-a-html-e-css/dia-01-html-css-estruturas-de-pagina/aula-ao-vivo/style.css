@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 
 }
 
@@ -28,7 +29,7 @@
 
 .header ul {
     display: inline-block;
-    padding-left: 60%;
+    padding-left: 40%;
     
     
 }
@@ -54,6 +55,10 @@
     color: white;
     max-height: 175px;
 
+}
+
+.premium a:hover {
+    font-size: 16px;
 }
 
 .premium-content {
@@ -115,6 +120,7 @@
 }
 
 .why-premium {
+    background-color: white;
     text-align: center;
 }
 
@@ -137,6 +143,7 @@
     background-color: black; 
     color: white;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .footer h2 {
@@ -164,6 +171,7 @@
     
     padding: 20px;
 }
+
 
 
 
