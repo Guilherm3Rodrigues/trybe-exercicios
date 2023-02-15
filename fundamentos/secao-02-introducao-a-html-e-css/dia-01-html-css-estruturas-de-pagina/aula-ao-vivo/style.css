@@ -133,5 +133,37 @@
     width: 200px;
 }
 
+.footer {
+    background-color: black; 
+    color: white;
+    text-align: center;
+}
+
+.footer h2 {
+    padding-top: 31px;
+}
+
+.div-style {
+    
+    /* border: 5px solid rgb(153, 50, 67); */
+    background: radial-gradient(circle at 100% 100%,#000 0,#000 7.4px,transparent 0) 0 0/12.4px 12.4px no-repeat,radial-gradient(circle at 0 100%,#000 0,#000 7.4px,transparent 0) 100% 0/12.4px 12.4px no-repeat,radial-gradient(circle at 100% 0,#000 0,#000 7.4px,transparent 0) 0 100%/12.4px 12.4px no-repeat,radial-gradient(circle at 0 0,#000 0,#000 7.4px,transparent 0) 100% 100%/12.4px 12.4px no-repeat,linear-gradient(#000,#000) 50% 50%/calc(100% - 10px) calc(100% - 24.8px) no-repeat,linear-gradient(#000,#000) 50% 50%/calc(100% - 24.8px) calc(100% - 10px) no-repeat,linear-gradient(54deg,#b00d6e,#ac0e6f 50%,#084791 98%);
+    width: 1200px;
+    margin: 30px auto;
+    border-radius: 12.4px;
+    padding: 30px;
+    
+}
+
+.div-style li {
+    list-style: none;
+    
+
+}
+
+.div-style h3 {
+    
+    padding: 20px;
+}
+
 
 
