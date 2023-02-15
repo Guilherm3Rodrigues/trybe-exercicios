@@ -1,0 +1,14 @@
+.header img {
+    width: 200px;
+}
+
+.cavalo-marinho {
+    color: blue;
+}
+
+.paragrafos {
+    background-color: aqua;
+    width: 250px;
+    height: 400px;
+    overflow: auto;
+}
