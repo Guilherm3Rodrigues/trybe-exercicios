@@ -5,6 +5,10 @@ body {
     
 }
 
+.header ul:active {
+    color: white;
+}
+
 
 .paragrafos {
     
@@ -23,7 +27,14 @@ body {
     position: absolute;
     z-index: 5;
     top: 450px;
+
     
+    
+}
+
+.paragrafos p:hover {
+    background-color: black;
+    opacity: 0.5;
 }
 
 #mountain {
