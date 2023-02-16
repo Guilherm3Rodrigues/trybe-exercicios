@@ -1,0 +1,72 @@
+
+.all-doc h1, h3{
+    color: red;
+
+}
+
+.all-doc h1 em {
+    padding: 5px;
+    font-size: 40px;
+    border: 1px solid black;
+
+}
+
+
+
+
+.list-ol li {
+
+    background-color: yellow;
+    width: 670px;
+    font-size: 20px;
+}
+
+.list-ol em {
+    font-weight: bold;
+}
+
+.primeiros {
+    color: blue;
+}
+
+.tres-primeiros{
+    
+    width: 670px;
+    color: blue;
+      
+}
+
+.tres-primeiros:hover {
+    background-color: rgb(233, 94, 94);
+}
+
+
+
+#trybe:hover {
+    color: green;
+
+    font-weight: bold;
+}
+
+#devdocs:hover{
+    color: yellow;
+
+    font-weight: bold;
+}
+
+#developer:hover{
+    color: black;
+
+    font-weight: bold;
+}
+#w3schools:hover{
+    color: green;
+
+    font-weight: bold;
+}
+#stack:hover{
+    color: orange;
+
+    font-weight: bold;
+}
+
