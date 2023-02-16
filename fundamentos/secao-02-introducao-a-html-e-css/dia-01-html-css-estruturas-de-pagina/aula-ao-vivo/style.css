@@ -10,7 +10,7 @@
     color: white;
     width: 65%;
     margin: auto;
-    height: 70px;
+    
 }
 
 .header-countainer {
@@ -19,6 +19,10 @@
 .header-countainer ul {
     background-color: black;
     
+}
+
+.header nav {
+    display: inline;
 }
 
 .header img {
