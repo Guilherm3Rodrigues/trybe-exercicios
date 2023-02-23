@@ -2,7 +2,7 @@ let nota = -1;
 
 switch (true) {
 
-    case (nota >= 90): console.log("O equivalente da: " + nota + " é A");
+    case (nota >= 90 && nota <= 100): console.log("O equivalente da: " + nota + " é A");
     break;
 
     case (nota >= 80): console.log("O equivalente da: " + nota + " é B");
@@ -17,7 +17,7 @@ switch (true) {
     case (nota >= 50): console.log("O equivalente da: " + nota + " é E");
     break;
 
-    case (nota < 50): console.log("O equivalente da: " + nota + " é F");
+    case (nota < 50 && nota >= 0): console.log("O equivalente da: " + nota + " é F");
     break;
 
     default: console.log("nota invalida");
