@@ -1,10 +1,4 @@
 let array = [5, 3, 2, 4, 7, 1, 0, 6]
-
-
-
-
-
-
 // primeiro, como comparar e trocar 2 numeros de posição
 // segundo, como repetir o processo passando por todos os numeros da lista
 // terceiro, evitar repetições desnecessarias
