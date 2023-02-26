@@ -1,27 +1,30 @@
-let array = [5, 3, 2, 4, 7, 1, 0, 6]
-// primeiro, como comparar e trocar 2 numeros de posição
-// segundo, como repetir o processo passando por todos os numeros da lista
-// terceiro, evitar repetições desnecessarias
+let array = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-for (let i2 = 0; i2 < array.length - 1; i2+= 1) {
-    
-console.log("I2 ===============: " + i2);
-  for (let i = 0; i < array.length - i2; i+= 1) {
-    
-        if (array[i] > array[i+1]) {
-            console.log("primeiro: " + array[i]);
-            console.log("segundo: " + array[i+1]);
+//novo array igual o primeiro
 
-            const temp = array[i + 1];
-            console.log("temporaria: " + temp);
-            
-            array[i+1] = array[i];
+let array2 = [];
+
+console.log(array2);
+
+// cada valor sera a multiplicação do elemento x o elemento da frente
+//- necessario selecionar 2 elementos
 
 
-            array[i] = temp;
-        }   else {
-            console.log("já em ordem");
-        }
-        console.log(array);
-  }
+
+
+
+
+for (let i = 0; i < array.length; i += 1) {
+
+    if (array[i] * array[i + 1] > 0) {
+
+        array2[i] = array[i] * array[i + 1];
+
+    } else {
+        array2[i] = array[i] + array[i];
+    }
+
 }
+
+console.log(array2);
+console.log(array);
