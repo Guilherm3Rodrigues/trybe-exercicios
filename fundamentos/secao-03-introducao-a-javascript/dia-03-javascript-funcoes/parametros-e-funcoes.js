@@ -56,9 +56,14 @@ cadastrarClientes('leon');
 function removerClientes (nome) {
 
 
-    for (let index = 0; index < clientesTrybeBank.length; index++) {
+    for (let index = 0; index < clientesTrybeBank.length; index+=1) {
         
+        if (clientesTrybeBank[index] === nome) {
 
+            clientesTrybeBank.splice(index, 1);
+
+        }
+        
     }
        console.log(clientesTrybeBank);   
     
