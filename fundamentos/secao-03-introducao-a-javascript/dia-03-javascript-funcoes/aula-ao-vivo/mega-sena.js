@@ -9,7 +9,7 @@
 
 let lotteryNumbers = [24, 32, 12, 8, 45, 57];
 
-for (let ind24, 32, 12, 8, 45, 57ex = 0; index < array.length; index+= 1) {
+for (let index = 0; index < array.length; index+= 1) {
     const element = array[index];
     
 }
