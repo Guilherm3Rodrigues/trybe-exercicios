@@ -70,6 +70,9 @@ let indexClient;
 
 console.log('lista de clientes: ' + clientesTrybeBank);
 
+// ===================================================== Função Cadastrar clientes
+
+
 function cadastrarClientes (nome) {
 
     if (typeof nome === 'string') {
@@ -83,7 +86,7 @@ function cadastrarClientes (nome) {
 
 }
 
-cadastrarClientes('1');
+cadastrarClientes('leon');
 
 // =================================================== Função remover clientes
 
@@ -95,34 +98,41 @@ function removerClientes (nome) {
 
             clientesTrybeBank.splice(indexClient, 1);
             console.log('Cliente: ' + nome + ' removido');
-
+            
         } else {
             console.log('Impossivel remover cliente não cadastrado');
         }
            
-       console.log('lista final de clientes hoje: ' + clientesTrybeBank);
+       console.log('lista de clientes após remoção: ' + clientesTrybeBank);
        
 }
 
 // ================================================ Função para validação de clientes na lista
 
 function searchList(nome) {
-    find = false;
     
-    for (let index = 0; index < clientesTrybeBank.length; index+=1) {
+        if (clientesTrybeBank.includes(nome)) {
+            indexClient = clientesTrybeBank.indexOf(nome);
+            return true;
+        } else {
+            return 'cliente nao encontrado';
+        }
+      
+   
+    // for (let index = 0; index < clientesTrybeBank.length; index+=1) {
         
-        if (clientesTrybeBank[index] === nome) {
-            find = true;
-            indexClient = index;
-            console.log('Encontrado cliente: ' + nome);
-            break;
-        } else if ((clientesTrybeBank.length - 1) <= index){
-            console.log('cliente não encontrado');
-            } 
+    //     if (clientesTrybeBank[index] === nome) {
+    //         find = true;
+    //         indexClient = index;
+    //         console.log('Encontrado cliente: ' + nome);
+    //         break;
+    //     } else if ((clientesTrybeBank.length - 1) <= index){
+    //         console.log('cliente não encontrado');
+    //         } 
 }
 
-return find;
-}
+
+
 
 
 removerClientes('Gus');
