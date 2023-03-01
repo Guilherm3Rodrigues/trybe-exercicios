@@ -6,29 +6,41 @@ let saldo3 = 200;
 
 function contaBAnk1(depositar) {
 
+    if (depositar > 0) {
     return saldo += depositar;
-    
+    } else {
+        console.log('Valor invalido');
+    }
 }
 
 
 function contaBAnk2(sacar) {
 
+    if (sacar <= saldo) {
     return saldo1 -= sacar;
-    
+    } else {
+        console.log('Saldo insuficiente');
+    }
 }
 
 
 function contaBAnk3(multiplica) {
 
+    if (multiplica > 0) {
     return saldo2 *= multiplica;
-    
-}
+    } else {
+        console.log('Valor Invalido');
+    }
+} 
 
 
 function contaBAnk4(divide) {
 
+    if ( divide > 0) {
     return saldo3 /= divide;
-    
+    } else {
+        console.log('Valor invalido');
+    }
 }
 
 contaBAnk1(500);
