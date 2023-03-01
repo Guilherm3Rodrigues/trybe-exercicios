@@ -72,18 +72,24 @@ console.log('lista de clientes: ' + clientesTrybeBank);
 
 function cadastrarClientes (nome) {
 
+    if (typeof nome === 'string') {
+
     clientesTrybeBank.push(nome);
     console.log('clientes cadastrados: ' + clientesTrybeBank);
+    } else {
+        console.log('Caracteres invalidos, impossivel cadastrar cliente');
+    }
+
 
 }
 
-cadastrarClientes('leon');
+cadastrarClientes('1');
 
 // =================================================== Função remover clientes
 
 function removerClientes (nome) {
 
-    let clientValid = find;
+    let clientValid = searchList(nome);
 
     if (clientValid === true) {
 
@@ -93,8 +99,9 @@ function removerClientes (nome) {
         } else {
             console.log('Impossivel remover cliente não cadastrado');
         }
-    
-       console.log('lista final de clientes hoje: ' + clientesTrybeBank);   
+           
+       console.log('lista final de clientes hoje: ' + clientesTrybeBank);
+       
 }
 
 // ================================================ Função para validação de clientes na lista
@@ -113,9 +120,11 @@ function searchList(nome) {
             console.log('cliente não encontrado');
             } 
 }
+
+return find;
 }
 
-searchList('Gus');
+
 removerClientes('Gus');
 
 
