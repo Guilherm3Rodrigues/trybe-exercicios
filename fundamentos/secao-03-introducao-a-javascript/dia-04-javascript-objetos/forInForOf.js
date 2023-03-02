@@ -47,3 +47,24 @@
     //     }
       
 
+    let student = {
+
+        
+        
+    };
+
+    function addProperty(object, key, value) {
+        
+        student[key] = value;
+
+    };
+      
+
+    addProperty(student, 'name', 'guilherme');
+    addProperty(student, 'lastName', 'rodrigues');
+    addProperty(student, 'email', 'guilherme.rodrigues2@live.com');
+    addProperty(student, 'gitHub', 'guilherm3rodrigues');
+    addProperty(student, 'LinkedIn', 'Guilherme Rodrigues');
+
+
+    console.log(student);
