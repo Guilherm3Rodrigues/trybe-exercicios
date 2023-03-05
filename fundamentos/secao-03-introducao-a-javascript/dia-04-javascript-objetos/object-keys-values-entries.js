@@ -15,5 +15,9 @@ let ass = animal.nome;
 
 
 
+console.log(animal);
+
+
+
 console.log(animal['comida']);
 
