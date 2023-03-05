@@ -13,7 +13,7 @@ let gato = {
 
 let ass = animal.nome;
 
-
+animal.nome = 'usoop'
 
 console.log(animal);
 
