@@ -5,8 +5,15 @@ const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
 
+
 // - Copie esse arquivo e edite apenas ele;
 //  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+
+const container = document.querySelector('.container')
+document.querySelector('.container').querySelectorAll('li').forEach((li) => {
+  li.onclick = changeTech
+  
+})
 
 
 
@@ -15,9 +22,11 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 
 function changeTech(event) {
-  const ul = document.querySelector('.tech'); 
-  ul.classList.remove('tech');
-  event.target.classList.add('tech');
+  const target = event.target
+
+  const li = container.querySelector('.tech');
+  li.classList.remove('tech');
+  target.classList.add('tech');
 }
 
 firstLi.addEventListener('click', (changeTech));
@@ -30,27 +39,42 @@ thirdLi.addEventListener('click', (changeTech));
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
-
 function alteredText(event) {
-  const ul = document.querySelector('.tech'); 
-  
-  ul.innerText = event.target.placeholder;
+  const ul = document.querySelector('.tech');
+  ul.innerText = event.target.value;
 }
 
 input.addEventListener('input', alteredText);
-
-
-
-
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 //  - Que tal redirecionar para seu portfólio?
 
+function linkDirect() {
+  window.location.href = 'http://wol.jw.org/pt/wol/h/r5/lp-t' 
+
+}
+
+myWebpage.addEventListener('dblclick', linkDirect);
+
+
+
+
+
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
+function changeColor(event) {
+  event.target.style.color = 'red';
+}
+
+myWebpage.addEventListener('mouseover', changeColor);
+
+
+
+
 // Segue abaixo um exemplo do uso de event.target:
+
 
 
 
