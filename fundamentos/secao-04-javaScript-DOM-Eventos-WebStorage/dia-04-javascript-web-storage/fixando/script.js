@@ -1,10 +1,12 @@
 const sectionBackground = document.querySelector('#background-color');
-const sectionFontColor = document.querySelector('#font-color')
+const sectionFontColor = document.querySelector('#font-color');
+const sectionFontSize = document.querySelector('#font-size');
 
 const buttonsBackground = sectionBackground.querySelectorAll('button');
 
 const buttonsFontColor = sectionFontColor.querySelectorAll('button');
-console.log(buttonsFontColor);
+
+const buttonsFontSize = sectionFontSize.querySelectorAll('button');
 
 
 
@@ -75,6 +77,35 @@ fontColor();
 
 
 
+function fontSize() {
+
+    for (let index = 0; index < buttonsFontSize.length; index += 1) {
+
+        buttonsFontSize[index].addEventListener('click', (event) => {
+
+            const target = event.target;
+            const paragraph = document.querySelector('.paragraph');
+
+            if (target.innerHTML === '8pt') {
+                paragraph.style.fontSize = '8pt'
+            }
+            if (target.innerHTML === '10pt') {
+                paragraph.style.fontSize = '10pt'
+            }
+            if (target.innerHTML === '12pt') {
+                paragraph.style.fontSize = '12pt'
+            }
+            if (target.innerHTML === '14pt') {
+                paragraph.style.fontSize = '14pt'
+            }
+            if (target.innerHTML === '20pt') {
+                paragraph.style.fontSize = '20pt'
+            }
+        })
+    }
+}
+
+fontSize();
 
 
 
