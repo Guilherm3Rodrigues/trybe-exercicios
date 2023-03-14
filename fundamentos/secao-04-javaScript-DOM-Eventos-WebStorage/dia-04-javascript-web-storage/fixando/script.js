@@ -14,6 +14,40 @@ const buttonsLineHeight = sectionLineHeight.querySelectorAll('button');
 
 const buttonsFontFamily = sectionFontFamily.querySelectorAll('button');
 
+// ================= save configs ============================// 
+
+function loadSettings() {
+    const backgroundColor = localStorage.getItem('backgroundColor');
+    const fontColor = localStorage.getItem('fontColor');
+    const fontSize = localStorage.getItem('fontSize');
+    const lineHeight = localStorage.getItem('lineHeight');
+    const typeFont = localStorage.getItem('typeFont')
+
+    if (backgroundColor) {
+        document.body.style.backgroundColor = backgroundColor;
+    }
+    if (fontColor) {
+        const main = document.querySelector('main');
+        main.style.color = fontColor;
+    }
+    if (fontSize) {
+        const font = document.querySelector('.paragraph') 
+        font.style.fontSize = fontSize;
+    }
+    if (lineHeight) {
+        const line = document.querySelector('.paragraph') 
+        line.style.lineHeight = lineHeight;
+    }
+    if (typeFont) {
+         
+        document.body.style.fontFamily = typeFont;
+    }
+
+}
+
+loadSettings();
+
+
 // ======================= background - color ===================================
 
 function backgroundColor() {
@@ -50,57 +84,28 @@ function backgroundColor() {
 
 backgroundColor();
 
-function loadSettings() {
-    const backgroundColor = localStorage.getItem('backgroundColor');
-    const fontColor = localStorage.getItem('fontColor');
-    const fontSize = localStorage.getItem('fontSize');
-    const lineHeight = localStorage.getItem('lineHeight');
-    const typeFont = localStorage.getItem('typeFont')
 
-    if (backgroundColor) {
-        document.body.style.backgroundColor = backgroundColor;
-    }
-    if (fontColor) {
-        const main = document.querySelector('main');
-        main.style.color = fontColor;
-    }
-    if (fontSize) {
-        const font = document.querySelector('.paragraph') 
-        font.style.fontSize = fontSize;
-    }
-    if (lineHeight) {
-        const line = document.querySelector('.paragraph') 
-        line.style.lineHeight = lineHeight;
-    }
-    if (typeFont) {
-         
-        document.body.style.fontFamily = typeFont;
-    }
-
-}
-
-loadSettings();
 
 // ======================= font - color ===================================
 
 function fontColor() {
 
     for (let index = 0; index < buttonsFontColor.length; index += 1) {
-        const main = document.querySelector('main');
+        
         buttonsFontColor[index].addEventListener('click', (event) => {
             const target = event.target;
-            const main = document.querySelector('main');
+            
 
             if (target.innerHTML === 'white') {
-                const value = main.style.color = 'white';
+                const value = document.body.style.color = 'white';
                 localStorage.setItem('fontColor', value);
             }
             if (target.innerHTML === 'black') {
-                const value = main.style.color = 'black';
+                const value = document.body.style.color = 'black';
                 localStorage.setItem('fontColor', value);
             }
             if (target.innerHTML === 'red') {
-                const value = main.style.color = 'red';
+                const value = document.body.style.color = 'red';
                 localStorage.setItem('fontColor', value);
             }
         })
