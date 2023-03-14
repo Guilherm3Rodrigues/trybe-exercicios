@@ -14,7 +14,7 @@ const buttonsLineHeight = sectionLineHeight.querySelectorAll('button');
 
 const buttonsFontFamily = sectionFontFamily.querySelectorAll('button');
 
-
+// ======================= background - color ===================================
 
 function backgroundColor() {
 
@@ -22,60 +22,89 @@ function backgroundColor() {
 
         buttonsBackground[index].addEventListener('click', (event) => {
             const target = event.target;
-
+            const value = target.getAttribute('data-value');
 
             if (target.innerHTML === 'white') {
-                document.body.style.backgroundColor = 'white';
-
+                const value = document.body.style.backgroundColor = 'white';
+                localStorage.setItem('backgroundColor', value);
             }
             if (target.innerHTML === 'black') {
-                document.body.style.backgroundColor = 'black';
-
+                const value = document.body.style.backgroundColor = 'black';
+                localStorage.setItem('backgroundColor', value);
             }
             if (target.innerHTML === 'green') {
-                document.body.style.backgroundColor = 'green';
-
+                const value = document.body.style.backgroundColor = 'green';
+                localStorage.setItem('backgroundColor', value);
             }
             if (target.innerHTML === 'blue') {
-                document.body.style.backgroundColor = 'blue';
-
+                const value = document.body.style.backgroundColor = 'blue';
+                localStorage.setItem('backgroundColor', value);
             }
             if (target.innerHTML === 'yellow') {
-                document.body.style.backgroundColor = 'yellow';
-
+                const value = document.body.style.backgroundColor = 'yellow';
+                localStorage.setItem('backgroundColor', value);
             }
-
         })
     }
 }
 
 backgroundColor();
 
+function loadSettings() {
+    const backgroundColor = localStorage.getItem('backgroundColor');
+    const fontColor = localStorage.getItem('fontColor');
+    const fontSize = localStorage.getItem('fontSize');
+    const lineHeight = localStorage.getItem('lineHeight');
+    const typeFont = localStorage.getItem('typeFont')
+
+    if (backgroundColor) {
+        document.body.style.backgroundColor = backgroundColor;
+    }
+    if (fontColor) {
+        const main = document.querySelector('main');
+        main.style.color = fontColor;
+    }
+    if (fontSize) {
+        const font = document.querySelector('.paragraph') 
+        font.style.fontSize = fontSize;
+    }
+    if (lineHeight) {
+        const line = document.querySelector('.paragraph') 
+        line.style.lineHeight = lineHeight;
+    }
+    if (typeFont) {
+         
+        document.body.style.fontFamily = typeFont;
+    }
+
+}
+
+loadSettings();
+
+// ======================= font - color ===================================
+
 function fontColor() {
 
     for (let index = 0; index < buttonsFontColor.length; index += 1) {
-
+        const main = document.querySelector('main');
         buttonsFontColor[index].addEventListener('click', (event) => {
             const target = event.target;
             const main = document.querySelector('main');
 
             if (target.innerHTML === 'white') {
-
-                main.style.color = 'white';
-
+                const value = main.style.color = 'white';
+                localStorage.setItem('fontColor', value);
             }
             if (target.innerHTML === 'black') {
-                main.style.color = 'black';
-
+                const value = main.style.color = 'black';
+                localStorage.setItem('fontColor', value);
             }
             if (target.innerHTML === 'red') {
-                main.style.color = 'red';
-
+                const value = main.style.color = 'red';
+                localStorage.setItem('fontColor', value);
             }
-
         })
     }
-
 }
 
 fontColor();
@@ -92,19 +121,24 @@ function fontSize() {
             const paragraph = document.querySelector('.paragraph');
 
             if (target.innerHTML === '8pt') {
-                paragraph.style.fontSize = '8pt'
+                const value = paragraph.style.fontSize = '8pt'
+                localStorage.setItem('fontSize', value);
             }
             if (target.innerHTML === '10pt') {
-                paragraph.style.fontSize = '10pt'
+                const value = paragraph.style.fontSize = '10pt'
+                localStorage.setItem('fontSize', value);
             }
             if (target.innerHTML === '12pt') {
-                paragraph.style.fontSize = '12pt'
+                const value = paragraph.style.fontSize = '12pt'
+                localStorage.setItem('fontSize', value);
             }
             if (target.innerHTML === '14pt') {
-                paragraph.style.fontSize = '14pt'
+                const value = paragraph.style.fontSize = '14pt'
+                localStorage.setItem('fontSize', value);
             }
             if (target.innerHTML === '20pt') {
-                paragraph.style.fontSize = '20pt'
+                const value = paragraph.style.fontSize = '20pt'
+                localStorage.setItem('fontSize', value);
             }
         })
     }
@@ -122,19 +156,24 @@ function lineHeight() {
             const paragraph = document.querySelector('.paragraph');
 
             if (target.innerHTML === '1') {
-                paragraph.style.lineHeight =  '1'
+                const value = paragraph.style.lineHeight = '1'
+                localStorage.setItem('lineHeight', value);
             }
             if (target.innerHTML === 'normal') {
-                paragraph.style.lineHeight = 'normal'
+                const value = paragraph.style.lineHeight = 'normal'
+                localStorage.setItem('lineHeight', value);
             }
             if (target.innerHTML === '1.5') {
-                paragraph.style.lineHeight = '1.5'
+                const value = paragraph.style.lineHeight = '1.5'
+                localStorage.setItem('lineHeight', value);
             }
             if (target.innerHTML === '2.0') {
-                paragraph.style.lineHeight = '2'
+                const value = paragraph.style.lineHeight = '2'
+                localStorage.setItem('lineHeight', value);
             }
             if (target.innerHTML === '3.0') {
-                paragraph.style.lineHeight = '3'
+                const value =  paragraph.style.lineHeight = '3'
+                localStorage.setItem('lineHeight', value);
             }
         })
     }
@@ -149,16 +188,16 @@ function typeFont() {
         buttonsFontFamily[index].addEventListener('click', (event) => {
             const target = event.target;
 
-
             if (target.innerHTML === 'Arial') {
-                document.body.style.fontFamily = 'Arial';
-
+                const value = document.body.style.fontFamily = 'Arial';
+                localStorage.setItem('typeFont', value);
+                
             }
             if (target.innerHTML === 'Times New Roman') {
-                document.body.style.fontFamily = 'Times New Roman';
-
+                const value = document.body.style.fontFamily = 'Times New Roman';
+                localStorage.setItem('typeFont', value);
             }
-            
+
         })
     }
 }
