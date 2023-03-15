@@ -17,6 +17,10 @@ body {
     flex-flow: row wrap;
   }
 
+  .red {
+    background-color: red;
+  }
+
 
   .container li {
     align-items: center;

@@ -15,6 +15,12 @@ document.querySelector('.container').querySelectorAll('li').forEach((li) => {
   
 })
 
+const div1 = document.createElement('div')
+const div2 = document.createElement('div')
+
+container.append(div1, div2)
+// container.appendChild(div1)
+// container.appendChild(div2)
 
 
 
@@ -22,11 +28,9 @@ document.querySelector('.container').querySelectorAll('li').forEach((li) => {
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 
 function changeTech(event) {
-  const target = event.target
-
   const li = container.querySelector('.tech');
   li.classList.remove('tech');
-  target.classList.add('tech');
+  event.target.classList.add('tech');
 }
 
 firstLi.addEventListener('click', (changeTech));
@@ -76,6 +80,16 @@ myWebpage.addEventListener('mouseover', changeColor);
 // Segue abaixo um exemplo do uso de event.target:
 
 
+const html = `
+<div class="red">
+  <h1>TITULO</h1>
+</div>
+`
+
+container.addEventListener('click', (event) => {
+  console.log(event.currentTarget)
+  event.target.innerHTML = ''
+})
 
 
 

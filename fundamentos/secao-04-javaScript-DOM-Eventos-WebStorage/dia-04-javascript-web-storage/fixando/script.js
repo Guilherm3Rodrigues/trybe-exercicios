@@ -14,6 +14,12 @@ const buttonsLineHeight = sectionLineHeight.querySelectorAll('button');
 
 const buttonsFontFamily = sectionFontFamily.querySelectorAll('button');
 
+const paragraphText = document.querySelector('.paragraph');
+
+// ================== text paragraph ===========================//
+
+paragraphText.innerHTML = 'mussum ipsum';
+
 // ================= save configs ============================// 
 
 function loadSettings() {
@@ -31,15 +37,15 @@ function loadSettings() {
         main.style.color = fontColor;
     }
     if (fontSize) {
-        const font = document.querySelector('.paragraph') 
+        const font = document.querySelector('.paragraph')
         font.style.fontSize = fontSize;
     }
     if (lineHeight) {
-        const line = document.querySelector('.paragraph') 
+        const line = document.querySelector('.paragraph')
         line.style.lineHeight = lineHeight;
     }
     if (typeFont) {
-         
+
         document.body.style.fontFamily = typeFont;
     }
 
@@ -86,15 +92,15 @@ backgroundColor();
 
 
 
-// ======================= font - color ===================================
+// ======================= font - color =================================== //
 
 function fontColor() {
 
     for (let index = 0; index < buttonsFontColor.length; index += 1) {
-        
+
         buttonsFontColor[index].addEventListener('click', (event) => {
             const target = event.target;
-            
+
 
             if (target.innerHTML === 'white') {
                 const value = document.body.style.color = 'white';
@@ -114,7 +120,7 @@ function fontColor() {
 
 fontColor();
 
-
+// ======================= font - size =================================== //
 
 function fontSize() {
 
@@ -151,6 +157,8 @@ function fontSize() {
 
 fontSize();
 
+// ======================= line - Height =================================== //
+
 function lineHeight() {
 
     for (let index = 0; index < buttonsLineHeight.length; index += 1) {
@@ -177,7 +185,7 @@ function lineHeight() {
                 localStorage.setItem('lineHeight', value);
             }
             if (target.innerHTML === '3.0') {
-                const value =  paragraph.style.lineHeight = '3'
+                const value = paragraph.style.lineHeight = '3'
                 localStorage.setItem('lineHeight', value);
             }
         })
@@ -185,6 +193,8 @@ function lineHeight() {
 }
 
 lineHeight();
+
+// ======================= type - Font =================================== //
 
 function typeFont() {
 
@@ -196,7 +206,7 @@ function typeFont() {
             if (target.innerHTML === 'Arial') {
                 const value = document.body.style.fontFamily = 'Arial';
                 localStorage.setItem('typeFont', value);
-                
+
             }
             if (target.innerHTML === 'Times New Roman') {
                 const value = document.body.style.fontFamily = 'Times New Roman';
